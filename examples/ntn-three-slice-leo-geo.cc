@@ -154,8 +154,10 @@ main(int argc, char* argv[])
     // ---- Slice assignment via the (previously dead) NtnSliceSelector ----
     // Each UE carries a representative 5-tuple per its provisioned traffic
     // class; Match() resolves the S-NSSAI from the DSCP/port/app rules that
-    // ThreeSliceDefault() populated. UE 3k -> eMBB (app-label), 3k+1 -> URLLC
-    // (DSCP EF 46, RFC 4594), 3k+2 -> mMTC (CoAP port 5683).
+    // ThreeSliceDefault() populated. The marking MUST match the actual
+    // MixedBouquet per-UE traffic (u%3 -> 0:mMTC/NB-IoT, 1:eMBB, 2:URLLC), so:
+    // UE 3k -> mMTC (CoAP port 5683), 3k+1 -> eMBB (app-label), 3k+2 -> URLLC
+    // (DSCP EF 46, RFC 4594).
     std::vector<Snssai> ueSnssai(numUes);
     for (uint32_t ue = 0; ue < numUes; ++ue)
     {
@@ -163,13 +165,13 @@ main(int argc, char* argv[])
         switch (ue % 3)
         {
         case 0:
-            fd.appLabel = "embb";
+            fd.dstPort = 5683; // CoAP -> mMTC
             break;
         case 1:
-            fd.dscp = 46; // DSCP EF -> URLLC
+            fd.appLabel = "embb"; // -> eMBB
             break;
         default:
-            fd.dstPort = 5683; // CoAP -> mMTC
+            fd.dscp = 46; // DSCP EF -> URLLC
             break;
         }
         ueSnssai[ue] = stack.selector->Match(fd);
@@ -261,22 +263,18 @@ main(int argc, char* argv[])
             ntngeo::SlantRangeM(uePos, geoEcef) / 299792458.0 * 1e3 + backhaulMs;
         const double latencyMs = servedByGeo ? geoLatMs : leoLatMs;
 
-        // MEASURED delivered packets (1400-byte DL TBs off the PacketSink).
-        const uint64_t rxBytes = rs.GetUeRxBytes(ue);
-        const uint64_t deliveredPkts = rxBytes / 1400;
+        // GAP M5 FIX: MEASURED delivered-packet COUNT off the in-band sink, not
+        // rxBytes/1400 (wrong for 128 B mMTC / 256 B URLLC).
+        const uint64_t deliveredPkts = rs.GetUeRxPackets(ue);
         for (uint64_t p = 0; p < deliveredPkts; ++p)
         {
             stack.monitor->RecordPacket(s, latencyMs, true);
         }
 
-        // MEASURED per-UE TBLER -> lost-packet count, so reliabilityBreach is
-        // measured, not a coin flip. lost = delivered * tbler/(1-tbler).
-        const double measTbler = rs.GetUeRecentTbler(ue);
-        const double tbler =
-            (std::isnan(measTbler) || measTbler < 0.0) ? 0.0 : std::min(measTbler, 0.5);
-        const double denom = std::max(1e-6, 1.0 - tbler);
-        const uint64_t lostPkts =
-            static_cast<uint64_t>(std::llround(static_cast<double>(deliveredPkts) * tbler / denom));
+        // GAP L3 FIX: MEASURED sequence-gap losses, so reliabilityBreach comes
+        // from real dropped packets — not delivered*TBLER/(1-TBLER) synthesized
+        // from a single last-TB sample.
+        const uint64_t lostPkts = rs.GetUeLostPackets(ue);
         for (uint64_t p = 0; p < lostPkts; ++p)
         {
             stack.monitor->RecordPacket(s, latencyMs, false);
