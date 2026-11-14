@@ -1,0 +1,57 @@
+diff -ru a/examples/ntn-slice-tenants-leo.cc b/examples/ntn-slice-tenants-leo.cc
+--- a/examples/ntn-slice-tenants-leo.cc	2026-11-04 20:20:11.552042826 +0500
++++ b/examples/ntn-slice-tenants-leo.cc	2026-11-04 20:20:11.579563032 +0500
+@@ -136,7 +136,7 @@
+     if (slots > 0 && g.rbgPerSlot > 0 && g.policy == "contract_trim" && bpr.size() > kA && rbg.size() > kA && rbg[kA] > 0 &&
+         bpr[kA] > 0)
+     {
+-        // Delivered-rate trim: scale the quota by the ratio of the target to the transport-block bytes A received, so
++        // Built-bytes trim: scale the quota by the ratio of the target to the transport-block bytes built for A, so
+         // that the leftover RBGs a saturated tenant also wins do not add to its rate.
+         const double target = g.headroom * g.overhead * g.contractBps * g.ctrlS;
+         const double cap = 1.0 - g.floor[kB] - g.floor[kM];
+@@ -227,7 +227,7 @@
+     cmd.AddValue("clusterOffsetDeg", "latitude offset of the UE square from the sub-satellite point (deg)", clusterOffsetDeg);
+     cmd.AddValue("blockErrors", "false disables decoding errors, hence retransmissions", blockErrors);
+     cmd.AddValue("policy", "pf | qos | policed | limiter | static | contract | contract_eph | contract_trim", g.policy);
+-    cmd.AddValue("trimGain", "contract_trim: exponent of the delivered-rate correction", g.trimGain);
++    cmd.AddValue("trimGain", "contract_trim: exponent of the built-bytes correction", g.trimGain);
+     cmd.AddValue("quotas", "static quotas A,B,mMTC", quotas);
+     cmd.AddValue("initQuotas", "quotas before the first control step", initQuotas);
+     cmd.AddValue("floors", "quota floors A,B,mMTC", floors);
+diff -ru a/model/ntn-slice-contract-trim.h b/model/ntn-slice-contract-trim.h
+--- a/model/ntn-slice-contract-trim.h	2026-11-04 20:20:11.542827571 +0500
++++ b/model/ntn-slice-contract-trim.h	2026-11-04 20:20:11.573046657 +0500
+@@ -2,8 +2,8 @@
+  * SPDX-License-Identifier: GPL-2.0-only
+  * Copyright (c) 2026 Muhammad Uzair (ns3-ntn-toolkit)
+  *
+- * Delivered-rate trim of a tenant's slice quota: the quota is scaled by the ratio of the bytes the tenant should have
+- * received in a control period to those it did, so that RBGs it wins beyond its quota do not add to its rate.
++ * Built-bytes trim of a tenant's slice quota: the quota is scaled by the ratio of the transport-block bytes the tenant should have
++ * been given in a control period to those the scheduler built for it, so that RBGs it wins beyond its quota do not add to its rate.
+  */
+ #ifndef NTN_SLICE_CONTRACT_TRIM_H
+ #define NTN_SLICE_CONTRACT_TRIM_H
+@@ -18,17 +18,17 @@
+ 
+ /**
+  * \param quota the current quota, as a share of the RBGs of a slot
+- * \param targetBytes the transport-block bytes the tenant should receive per control period
+- * \param deliveredBytes the transport-block bytes it did receive; must be positive
++ * \param targetBytes the transport-block bytes the scheduler should build for the tenant per control period
++ * \param builtBytes the transport-block bytes it did build; must be positive
+  * \param gain exponent of the correction, in (0, 1]
+  * \param lowest smallest quota allowed
+  * \param highest largest quota allowed
+  * \return the next quota
+  */
+ inline double
+-TrimmedQuota(double quota, double targetBytes, double deliveredBytes, double gain, double lowest, double highest)
++TrimmedQuota(double quota, double targetBytes, double builtBytes, double gain, double lowest, double highest)
+ {
+-    return std::min(highest, std::max(lowest, quota * std::pow(targetBytes / deliveredBytes, gain)));
++    return std::min(highest, std::max(lowest, quota * std::pow(targetBytes / builtBytes, gain)));
+ }
+ 
+ } // namespace ntnslice

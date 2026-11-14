@@ -1,0 +1,271 @@
+418 runs to do
+tenants {'pol': 'policed', 'seed': 101} ok
+tenants {'pol': 'limiter', 'seed': 101} ok
+tenants {'pol': 'contract_eph', 'seed': 101} ok
+tenants {'pol': 'window', 'seed': 101} ok
+tenants {'pol': 'static_best', 'seed': 101} ok
+tenants {'pol': 'static_hi', 'seed': 101} ok
+tenants {'pol': 'qos', 'seed': 101} ok
+tenants {'pol': 'contract_trim', 'seed': 101} ok
+tenants {'pol': 'static_lo', 'seed': 101} ok
+tenants {'pol': 'contract', 'seed': 101} ok
+tenants {'pol': 'pf', 'seed': 101} ok
+tenants {'pol': 'policed', 'seed': 102} ok
+tenants {'pol': 'contract_trim', 'seed': 102} ok
+tenants {'pol': 'limiter', 'seed': 102} ok
+tenants {'pol': 'static_best', 'seed': 102} ok
+tenants {'pol': 'static_lo', 'seed': 102} ok
+tenants {'pol': 'contract', 'seed': 102} ok
+tenants {'pol': 'static_hi', 'seed': 102} ok
+tenants {'pol': 'pf', 'seed': 102} ok
+tenants {'pol': 'contract_eph', 'seed': 102} ok
+tenants {'pol': 'window', 'seed': 102} ok
+tenants {'pol': 'qos', 'seed': 102} ok
+tenants {'pol': 'policed', 'seed': 103} ok
+tenants {'pol': 'contract_trim', 'seed': 103} ok
+tenants {'pol': 'limiter', 'seed': 103} ok
+tenants {'pol': 'static_best', 'seed': 103} ok
+tenants {'pol': 'contract', 'seed': 103} ok
+tenants {'pol': 'static_lo', 'seed': 103} ok
+tenants {'pol': 'static_hi', 'seed': 103} ok
+tenants {'pol': 'contract_eph', 'seed': 103} ok
+tenants {'pol': 'window', 'seed': 103} ok
+tenants {'pol': 'qos', 'seed': 103} ok
+tenants {'pol': 'pf', 'seed': 103} ok
+tenants {'pol': 'policed', 'seed': 104} ok
+tenants {'pol': 'limiter', 'seed': 104} ok
+tenants {'pol': 'contract_trim', 'seed': 104} ok
+tenants {'pol': 'static_lo', 'seed': 104} ok
+tenants {'pol': 'static_best', 'seed': 104} ok
+tenants {'pol': 'static_hi', 'seed': 104} ok
+tenants {'pol': 'contract', 'seed': 104} ok
+tenants {'pol': 'qos', 'seed': 104} ok
+tenants {'pol': 'contract_eph', 'seed': 104} ok
+tenants {'pol': 'pf', 'seed': 104} ok
+tenants {'pol': 'window', 'seed': 104} ok
+tenants {'pol': 'policed', 'seed': 105} ok
+tenants {'pol': 'limiter', 'seed': 105} ok
+tenants {'pol': 'contract_trim', 'seed': 105} ok
+tenants {'pol': 'static_best', 'seed': 105} ok
+tenants {'pol': 'static_lo', 'seed': 105} ok
+tenants {'pol': 'static_hi', 'seed': 105} ok
+tenants {'pol': 'qos', 'seed': 105} ok
+tenants {'pol': 'contract_eph', 'seed': 105} ok
+tenants {'pol': 'contract', 'seed': 105} ok
+tenants {'pol': 'pf', 'seed': 105} ok
+tenants {'pol': 'window', 'seed': 105} ok
+tenants {'pol': 'policed', 'seed': 106} ok
+tenants {'pol': 'contract_trim', 'seed': 106} ok
+tenants {'pol': 'limiter', 'seed': 106} ok
+tenants {'pol': 'static_best', 'seed': 106} ok
+tenants {'pol': 'static_lo', 'seed': 106} ok
+tenants {'pol': 'policed', 'seed': 107} ok
+tenants {'pol': 'static_hi', 'seed': 106} ok
+tenants {'pol': 'contract', 'seed': 106} ok
+tenants {'pol': 'qos', 'seed': 106} ok
+tenants {'pol': 'limiter', 'seed': 107} ok
+tenants {'pol': 'contract_eph', 'seed': 106} ok
+tenants {'pol': 'pf', 'seed': 106} ok
+tenants {'pol': 'window', 'seed': 106} ok
+tenants {'pol': 'contract_trim', 'seed': 107} ok
+tenants {'pol': 'static_hi', 'seed': 107} ok
+tenants {'pol': 'policed', 'seed': 108} ok
+tenants {'pol': 'static_lo', 'seed': 107} ok
+tenants {'pol': 'static_best', 'seed': 107} ok
+tenants {'pol': 'qos', 'seed': 107} ok
+tenants {'pol': 'contract', 'seed': 107} ok
+tenants {'pol': 'limiter', 'seed': 108} ok
+tenants {'pol': 'window', 'seed': 107} ok
+tenants {'pol': 'contract_trim', 'seed': 108} ok
+tenants {'pol': 'contract_eph', 'seed': 107} ok
+tenants {'pol': 'pf', 'seed': 107} ok
+tenants {'pol': 'policed', 'seed': 109} ok
+tenants {'pol': 'static_best', 'seed': 108} ok
+tenants {'pol': 'static_hi', 'seed': 108} ok
+tenants {'pol': 'contract', 'seed': 108} ok
+tenants {'pol': 'static_lo', 'seed': 108} ok
+tenants {'pol': 'limiter', 'seed': 109} ok
+tenants {'pol': 'contract_eph', 'seed': 108} ok
+tenants {'pol': 'qos', 'seed': 108} ok
+tenants {'pol': 'pf', 'seed': 108} ok
+tenants {'pol': 'window', 'seed': 108} ok
+tenants {'pol': 'contract_trim', 'seed': 109} ok
+tenants {'pol': 'static_best', 'seed': 109} ok
+tenants {'pol': 'policed', 'seed': 110} ok
+tenants {'pol': 'contract', 'seed': 109} ok
+tenants {'pol': 'static_hi', 'seed': 109} ok
+tenants {'pol': 'static_lo', 'seed': 109} ok
+tenants {'pol': 'contract_eph', 'seed': 109} ok
+tenants {'pol': 'contract_trim', 'seed': 110} ok
+tenants {'pol': 'limiter', 'seed': 110} ok
+tenants {'pol': 'window', 'seed': 109} ok
+tenants {'pol': 'qos', 'seed': 109} ok
+tenants {'pol': 'pf', 'seed': 109} ok
+tenants {'pol': 'policed', 'seed': 111} ok
+tenants {'pol': 'static_best', 'seed': 110} ok
+tenants {'pol': 'static_lo', 'seed': 110} ok
+tenants {'pol': 'contract', 'seed': 110} ok
+tenants {'pol': 'limiter', 'seed': 111} ok
+tenants {'pol': 'static_hi', 'seed': 110} ok
+tenants {'pol': 'contract_trim', 'seed': 111} ok
+tenants {'pol': 'contract_eph', 'seed': 110} ok
+tenants {'pol': 'qos', 'seed': 110} ok
+tenants {'pol': 'pf', 'seed': 110} ok
+tenants {'pol': 'window', 'seed': 110} ok
+tenants {'pol': 'policed', 'seed': 112} ok
+tenants {'pol': 'static_best', 'seed': 111} ok
+tenants {'pol': 'static_lo', 'seed': 111} ok
+tenants {'pol': 'limiter', 'seed': 112} ok
+tenants {'pol': 'static_hi', 'seed': 111} ok
+tenants {'pol': 'contract', 'seed': 111} ok
+tenants {'pol': 'qos', 'seed': 111} ok
+tenants {'pol': 'pf', 'seed': 111} ok
+tenants {'pol': 'contract_eph', 'seed': 111} ok
+tenants {'pol': 'window', 'seed': 111} ok
+tenants {'pol': 'contract_trim', 'seed': 112} ok
+tenants {'pol': 'static_best', 'seed': 112} ok
+tenants {'pol': 'static_lo', 'seed': 112} ok
+tenants {'pol': 'static_hi', 'seed': 112} ok
+tenants {'pol': 'contract', 'seed': 112} ok
+tenants {'pol': 'contract_eph', 'seed': 112} ok
+tenants {'pol': 'qos', 'seed': 112} ok
+tenants {'pol': 'pf', 'seed': 112} ok
+tenants {'pol': 'window', 'seed': 112} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 101} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 101} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 101} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 101} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 101} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 101} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 101} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 101} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 101} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 101} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 102} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 102} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 102} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 101} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 102} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 102} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 102} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 102} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 102} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 102} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 102} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 103} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 103} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 102} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 103} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 103} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 103} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 103} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 103} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 103} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 103} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 103} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 104} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 103} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 104} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 104} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 104} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 104} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 104} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 104} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 104} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 104} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 104} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 104} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 105} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 105} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 105} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 105} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 105} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 105} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 105} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 105} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 105} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 105} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 106} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 105} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 106} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 106} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 106} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 106} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 106} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 106} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 106} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 106} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 106} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 107} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 106} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 107} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 107} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 107} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 107} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 107} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 107} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 107} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 107} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 107} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 107} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 108} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 108} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 108} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 108} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 108} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 108} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 108} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 108} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 108} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 108} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 108} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 109} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 109} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 109} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 109} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 109} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 109} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 109} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 109} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 109} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 109} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 110} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 110} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 110} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 109} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 110} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 110} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 110} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 110} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 110} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 110} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 110} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 111} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 111} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 111} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 110} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 111} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 111} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 111} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 111} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 111} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 111} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 111} ok
+pass {'pol': 'reactive', 'period': 1, 'seed': 112} ok
+pass {'pol': 'qos', 'period': 1, 'seed': 112} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 111} ok
+pass {'pol': 'static_lo', 'period': 1, 'seed': 112} ok
+pass {'pol': 'static_hi', 'period': 1, 'seed': 112} ok
+pass {'pol': 'predict', 'period': 1, 'seed': 112} ok
+pass {'pol': 'reactive', 'period': 2, 'seed': 112} ok
+pass {'pol': 'pf', 'period': 1, 'seed': 112} ok
+pass {'pol': 'qos', 'period': 2, 'seed': 112} ok
+pass {'pol': 'static_hi', 'period': 2, 'seed': 112} ok
+pass {'pol': 'pf', 'period': 2, 'seed': 112} ok
+tsens {'pol': 'noerr_limiter', 'seed': 101} ok
+pass {'pol': 'bwp', 'period': 1, 'seed': 112} ok
+tsens {'pol': 'noerr_contract_trim', 'seed': 101} ok
+tsens {'pol': 'noerr_qos', 'seed': 101} ok
+tsens {'pol': 'off_limiter', 'seed': 101} ok
+tsens {'pol': 'off_contract_trim', 'seed': 101} ok
+tsens {'pol': 'off_static_best', 'seed': 101} ok

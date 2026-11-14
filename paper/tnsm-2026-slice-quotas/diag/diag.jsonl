@@ -1,0 +1,10 @@
+{"pol": "reactive", "seed": 1, "span": 116.5, "slots_new_only": 131706, "slots_retx_only": 0, "slots_both": 0, "tb_new": 668822, "tb_retx": 0, "tot": 30.810189, "embb": 14.7468, "sched_slots": 131526}
+{"pol": "static_lo", "seed": 1, "span": 116.5, "slots_new_only": 133964, "slots_retx_only": 0, "slots_both": 0, "tb_new": 675941, "tb_retx": 0, "tot": 30.456589, "embb": 14.3933, "sched_slots": 133786}
+{"pol": "pf", "seed": 1, "span": 116.5, "slots_new_only": 144683, "slots_retx_only": 0, "slots_both": 0, "tb_new": 724513, "tb_retx": 0, "tot": 34.315589, "embb": 18.3957, "sched_slots": 0}
+{"pol": "qos", "seed": 1, "span": 116.5, "slots_new_only": 147180, "slots_retx_only": 0, "slots_both": 0, "tb_new": 686400, "tb_retx": 0, "tot": 33.276389, "embb": 17.2132, "sched_slots": 0}
+{"pol": "pf", "seed": 2, "span": 116.5, "slots_new_only": 146338, "slots_retx_only": 0, "slots_both": 0, "tb_new": 731344, "tb_retx": 0, "tot": 34.401780200000005, "embb": 18.5603, "sched_slots": 0}
+{"pol": "bwp", "seed": 1, "span": 116.5, "slots_new_only": 352933, "slots_retx_only": 0, "slots_both": 0, "tb_new": 1006521, "tb_retx": 0, "tot": 36.556189, "embb": 20.4995, "sched_slots": 0}
+{"pol": "qos", "seed": 2, "span": 116.5, "slots_new_only": 147038, "slots_retx_only": 0, "slots_both": 0, "tb_new": 683216, "tb_retx": 0, "tot": 33.007489, "embb": 16.9458, "sched_slots": 0}
+{"pol": "static_lo", "seed": 2, "span": 116.5, "slots_new_only": 134177, "slots_retx_only": 0, "slots_both": 0, "tb_new": 678699, "tb_retx": 0, "tot": 30.741889, "embb": 14.6782, "sched_slots": 134022}
+{"pol": "reactive", "seed": 2, "span": 116.5, "slots_new_only": 131696, "slots_retx_only": 0, "slots_both": 0, "tb_new": 670534, "tb_retx": 0, "tot": 30.514489, "embb": 14.4508, "sched_slots": 131546}
+{"pol": "bwp", "seed": 2, "span": 116.5, "slots_new_only": 352776, "slots_retx_only": 0, "slots_both": 0, "tb_new": 1010476, "tb_retx": 0, "tot": 36.746389, "embb": 20.6944, "sched_slots": 0}

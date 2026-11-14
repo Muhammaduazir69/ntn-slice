@@ -1,0 +1,31 @@
+bins {'/home/uzair/6g_ntn_ns3/papers/paper10_ntn_slice/sim/bin/p10-pass': '899936e400f2', '/home/uzair/6g_ntn_ns3/papers/paper10_ntn_slice/sim/bin/p10-tenants': 'b8174c6b72e8'} libs f024a8c99989 32
+35 runs to do of 35
+{'study': 'tenants', 'pol': 'r20sweep_0.7', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20sweep_0.68', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20sweep_0.66', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20sweep_0.72', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20sweep_0.78', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20sweep_0.74', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'nesweep_0.16', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'nesweep_0.18', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 101} ok
+{'study': 'tenants', 'pol': 'nesweep_0.2', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'r20_pf', 'seed': 101} ok
+{'study': 'tenants', 'pol': 'nesweep_0.22', 'seed': 99} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 101} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 102} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 102} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 103} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 103} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 104} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 104} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 105} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 105} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 106} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 106} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 107} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 107} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 108} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 108} ok
+{'study': 'tenants', 'pol': 'lim_static_best', 'seed': 109} ok
+{'study': 'tenants', 'pol': 'lim_contract_trim', 'seed': 109} ok

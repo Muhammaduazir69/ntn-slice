@@ -1,0 +1,59 @@
+--- ntn-slice-pass-leo.cc	2026-11-04 17:53:23.204378781 +0500
++++ ntn-slice-pass-leo-r2.cc	2026-11-09 07:36:59.426794606 +0500
+@@ -29,7 +29,6 @@
+ #include "ns3/ntn-oran-application.h"
+ #include "ns3/ntn-oran-payload-header.h"
+ #include "ns3/ntn-oran-sink.h"
+-#include "ns3/ntn-real-stack-helper.h"
+ #include "ns3/ntn-slice-quota-scheduler.h"
+ #include "ns3/ntn-tr38811-mobility-model.h"
+ #include "ns3/sgp4-mobility-model.h"
+@@ -42,6 +41,15 @@
+ #include <numeric>
+ #include <sstream>
+ 
++// Round 2: read the helper's private NrHelper to activate a bearer for a 5QI that the helper does not map (5QI 3).
++#include "ns3/nr-module.h"
++#include "ns3/nr-eps-bearer.h"
++#include "ns3/nr-epc-tft.h"
++#include "ns3/internet-module.h"
++#define private public
++#include "ns3/ntn-real-stack-helper.h"
++#undef private
++
+ using namespace ns3;
+ #include "ns3/nr-phy-mac-common.h"
+ #include <array>
+@@ -314,6 +322,8 @@
+     cmd.AddValue("satEirpDbm", "satellite conducted power (dBm)", satEirpDbm);
+     cmd.AddValue("ueBehindS", "UE cluster at the sub-satellite point this many seconds before the start", ueBehindS);
+     cmd.AddValue("embbMbps", "offered load per eMBB UE (Mb/s)", embbMbps);
++    uint32_t critFiveQi = 79;
++    cmd.AddValue("critFiveQi", "5QI of the delay-critical flows: 79 (non-GBR V2X) or 3 (GBR, 50 ms)", critFiveQi);
+     cmd.AddValue("critBytes", "delay-critical packet size (bytes)", critBytes);
+     cmd.AddValue("critPeriodMs", "delay-critical packet period per UE (ms)", critPeriodMs);
+     cmd.AddValue("deadlineMs", "delay-critical packet delay budget D (ms)", deadlineMs);
+@@ -417,7 +427,22 @@
+         }
+         else if (s == kCrit)
+         {
+-            a = rs.InstallOranFlow(u, 79, 1, 0x000002, NtnOranApplication::URLLC_PERIODIC, Seconds(t0), Seconds(t1));
++            NS_ABORT_MSG_IF(critFiveQi != 79 && critFiveQi != 3, "critFiveQi must be 79 or 3");
++            a = rs.InstallOranFlow(u, critFiveQi, 1, 0x000002, NtnOranApplication::URLLC_PERIODIC, Seconds(t0), Seconds(t1));
++            if (critFiveQi == 3 && g.policy == "qos")
++            {
++                AddressValue av;
++                a.Get(1)->GetAttribute("Local", av);
++                const uint16_t port = InetSocketAddress::ConvertFrom(av.Get()).GetPort();
++                NrEpsBearer bearer(NrEpsBearer::GBR_GAMING);
++                Ptr<NrEpcTft> tft = Create<NrEpcTft>();
++                NrEpcTft::PacketFilter pf;
++                pf.localPortStart = port;
++                pf.localPortEnd = port;
++                tft->Add(pf);
++                NS_ABORT_MSG_IF(!rs.m_nr, "no NrHelper");
++                rs.m_nr->ActivateDedicatedEpsBearer(rs.GetUeDevices().Get(u), bearer, tft);
++            }
+             a.Get(0)->SetAttribute("PacketSize", UintegerValue(critBytes));
+             a.Get(0)->SetAttribute("Period", TimeValue(Seconds(critPeriodMs / 1000.0)));
+         }

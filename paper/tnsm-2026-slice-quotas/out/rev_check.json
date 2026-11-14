@@ -1,0 +1,234 @@
+{
+ "same": 19,
+ "different": 0,
+ "rows": [
+  {
+   "key": [
+    "tenants",
+    "limiter",
+    0,
+    101
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "limiter",
+    0,
+    102
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "contract_trim",
+    0,
+    101
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "qos",
+    0,
+    102
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "qos",
+    1,
+    101
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "qos",
+    0,
+    101
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "reactive",
+    1,
+    101
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "pf",
+    1,
+    101
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "contract_trim",
+    0,
+    102
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "limiter",
+    0,
+    103
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "reactive",
+    1,
+    102
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "qos",
+    1,
+    102
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "contract_trim",
+    0,
+    103
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "reactive",
+    1,
+    103
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "pf",
+    1,
+    102
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "qos",
+    0,
+    103
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "qos",
+    1,
+    103
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "tenants",
+    "noerr_limiter",
+    0,
+    101
+   ],
+   "identical": true,
+   "old_bin": "edce92f6be6f",
+   "new_bin": "b8174c6b72e8",
+   "libs": "f024a8c99989"
+  },
+  {
+   "key": [
+    "pass",
+    "pf",
+    1,
+    103
+   ],
+   "identical": true,
+   "old_bin": "5e7a285fe60c",
+   "new_bin": "899936e400f2",
+   "libs": "f024a8c99989"
+  }
+ ]
+}
